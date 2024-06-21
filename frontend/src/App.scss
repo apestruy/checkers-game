@@ -1,0 +1,36 @@
+@import "./globalStyle/variables.scss";
+
+.app-container {
+  padding: 1rem;
+  background-color: #046680;
+  min-height: 100vh;
+  color: white;
+
+  .app-header {
+    text-align: center;
+    max-width: 1200px;
+    margin: 3rem auto 0;
+    font-family: "Helvetica";
+    font-size: 1.25rem;
+  }
+
+  .app-body {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .message-container {
+    display: flex;
+    justify-content: center;
+
+    .message {
+      background: rgba(255, 255, 255, 0.5);
+      color: #800020;
+      border-radius: 0.25rem;
+      padding: 0.5rem;
+      margin: 0 0 1rem;
+    }
+  }
+}

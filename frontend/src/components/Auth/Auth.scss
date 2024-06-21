@@ -1,0 +1,69 @@
+@import "../../globalStyle/variables.scss";
+
+.auth-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+
+  .auth-header {
+    font-family: "Helvetica";
+    font-size: 1.75rem;
+    margin-bottom: 0;
+  }
+
+  .auth-form {
+    margin: 0 auto;
+
+    .form-label {
+      display: block;
+      font-family: "Helvetica";
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin: 1.5rem 0;
+
+      .form-input {
+        display: block;
+        border-radius: 10px;
+        border: 1.5px solid white;
+        background: rgba(255, 255, 255, 0.7);
+        font-size: 1.25rem;
+        width: 18.75rem;
+        padding: 10px;
+        margin: 0.5rem 0;
+      }
+    }
+
+    .error-message {
+      text-align: center;
+      color: #ff91ad;
+      margin: 0.5rem;
+    }
+
+    .button-container {
+      .auth-button {
+        border-radius: 9px;
+        border: 1.5px solid white;
+        background: rgba(255, 255, 255, 0.7);
+        font-size: 1.125rem;
+        width: 7em;
+        height: 2em;
+        margin: 1rem;
+        cursor: pointer;
+
+        &:hover {
+          background: rgba(255, 255, 255, 0.5);
+        }
+      }
+    }
+  }
+
+  .link {
+    font-family: "Helvetica";
+    color: white;
+    margin: 0.5rem 0;
+    font-size: 1.125rem;
+    text-decoration: none;
+    padding: 0.5rem;
+  }
+}

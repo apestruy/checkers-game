@@ -1,0 +1,97 @@
+@import "../../globalStyle/variables.scss";
+
+.game-room {
+  display: flex;
+  flex-direction: row;
+
+  h2 {
+    font-weight: 500;
+    line-height: 2.25rem;
+  }
+
+  .game-info-container,
+  .score-tracker-container,
+  .game-controls {
+    padding: 1rem 1rem 2rem;
+    border: 0.35rem solid #0c2742;
+
+    h2 {
+      margin-top: 0;
+    }
+  }
+
+  .game-info-container {
+    margin: 4rem 2rem 0 auto;
+    height: 15rem;
+    max-width: 10rem;
+    text-align: center;
+  }
+
+  .dashboard {
+    margin: 4rem auto 0 2rem;
+
+    .score-tracker-container {
+      .score-item {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 0.75rem;
+      }
+
+      .score-item span:last-child {
+        margin-left: 1rem;
+      }
+    }
+
+    .game-controls {
+      padding: 1rem;
+      margin-top: 2rem;
+
+      .button-container {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+
+        .control-button {
+          background: rgba(255, 255, 255, 0.7);
+          font-size: 0.85rem;
+          border-radius: 0.25rem;
+          border: 1.5px solid #0c2742;
+          padding: 0.25rem 0.5rem;
+          cursor: pointer;
+
+          &:hover {
+            background: rgba(255, 255, 255, 0.5);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $screen-md) {
+  .game-room {
+    flex-direction: column-reverse;
+    margin-top: 0;
+
+    .game-info-container,
+    .dashboard {
+      margin: 1rem 0;
+      align-self: center;
+    }
+
+    .dashboard {
+      display: flex;
+
+      .game-controls {
+        margin-top: 0;
+        margin-left: 1rem;
+      }
+
+      .score-tracker-container,
+      .game-controls {
+        flex-grow: 1;
+        flex-basis: 0;
+      }
+    }
+  }
+}

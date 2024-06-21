@@ -1,0 +1,76 @@
+@import "../../../globalStyle/variables.scss";
+
+.game-board {
+  width: 40rem;
+  height: auto;
+  margin: 0 auto;
+  border: 0.5rem solid #0c2742;
+
+  .board-row {
+    display: flex;
+
+    .cell {
+      width: 5rem;
+      height: 5rem;
+    }
+
+    .light.cell {
+      background-color: #bbc3cc;
+    }
+
+    .dark.cell {
+      background-color: #20384d;
+      position: relative;
+
+      .black {
+        background-color: $black;
+        border: 2px solid #28424f;
+      }
+
+      .red {
+        background-color: $red;
+        border: 2px solid #4f0000;
+      }
+
+      .checker {
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 80%;
+        height: 80%;
+        transform: translate(-50%, -50%);
+      }
+
+      .selected {
+        box-shadow: 0 0 10px 3px #bbc3cc;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $screen-lg) {
+  .game-board {
+    width: 30rem;
+
+    .board-row {
+      .cell {
+        width: 3.75rem;
+        height: 3.75rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $screen-md) {
+  .game-board {
+    width: 20rem;
+
+    .board-row {
+      .cell {
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+    }
+  }
+}
