@@ -8,6 +8,10 @@ import express from "express";
 import session from "express-session";
 import cors from "cors";
 
+import { fileURLToPath } from "url";
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 const app = express();
 app.use(express.json());
 
@@ -17,6 +21,8 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
+
+app.use(express.static(path.join(__dirname, "../frontend/build")));
 
 app.use(
   session({
@@ -124,6 +130,10 @@ app.get("/game/:playerId/last", async (req, res) => {
   } catch (error) {
     res.status(500).json({ message: "Error retrieving game data" });
   }
+});
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../frontend/build", "index.html"));
 });
 
 const PORT = process.env.PORT || 4000;
