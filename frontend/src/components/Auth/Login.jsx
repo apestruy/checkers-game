@@ -35,7 +35,6 @@ const Login = () => {
     setFormData({ username: "", password: "" });
     setErrorMessage("");
   };
-  console.log(process.env.REACT_APP_API_URL);
 
   const handleSubmit = (event) => {
     event.preventDefault();
