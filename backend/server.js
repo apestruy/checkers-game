@@ -43,6 +43,8 @@ app.use(
 app.post("/register", async (req, res) => {
   const { username, name, password } = req.body;
 
+  console.log(username);
+
   try {
     const newPlayer = await Player.create({
       username,
